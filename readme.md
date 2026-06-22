@@ -18,6 +18,18 @@ Visual Studio Code extension that enables TypeScript syntax highlighting inside 
 
 Licence MIT
 
+## Install
+
+Search for `TypeBox Script` in the VS Code Extensions panel, or install via the command line:
+
+```bash
+code --install-extension sinclairzx81.typebox-script
+```
+
+## Contribute
+
+TypeBox Script is open to community contribution. Please ensure you submit an issue before submitting a pull request. The TypeBox project prefers open community discussion before accepting new features.
+
 
 
 
