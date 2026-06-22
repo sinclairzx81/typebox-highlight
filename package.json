@@ -1,0 +1,30 @@
+{
+  "name": "typebox-highlight",
+  "displayName": "TypeBox Highlight",
+  "description": "Syntax highlighting for embedded TypeScript types",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "typebox.highlight",
+        "path": "./src/typebox-highlight.json",
+        "injectTo": [
+          "source.ts",
+          "source.tsx",
+          "source.js",
+          "source.jsx"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.typescript": "typescript"
+        }
+      }
+    ]
+  }
+}

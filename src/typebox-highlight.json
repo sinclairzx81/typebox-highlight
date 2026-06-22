@@ -1,0 +1,117 @@
+{
+  "scopeName": "typebox.highlight",
+  "injectionSelector": "L:source.ts -comment -string, L:source.tsx -comment -string, L:source.js -comment -string, L:source.jsx -comment -string",
+  "patterns": [
+    { "include": "#typebox-highlight-backtick" },
+    { "include": "#typebox-highlight-double" },
+    { "include": "#typebox-highlight-single" }
+  ],
+  "repository": {
+    "typebox-highlight-backtick": {
+      "begin": "(?<![\\w$.])(?:(?:Type|t)\\.Script|Script|s)\\s*\\((?:[^`'\"]*?,\\s*)?(`)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.string.template.begin.ts" }
+      },
+      "end": "`",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.template.end.ts" }
+      },
+      "name": "meta.embedded.block.typescript",
+      "contentName": "meta.embedded.block.typescript",
+      "patterns": [
+        { "include": "#ts-tokens" }
+      ]
+    },
+    "typebox-highlight-double": {
+      "begin": "(?<![\\w$.])(?:(?:Type|t)\\.Script|Script|s)\\s*\\((?:[^`'\"]*?,\\s*)?(\")",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.string.begin.ts" }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.ts" }
+      },
+      "name": "meta.embedded.block.typescript",
+      "contentName": "meta.embedded.block.typescript",
+      "patterns": [
+        { "include": "#ts-tokens" }
+      ]
+    },
+    "typebox-highlight-single": {
+      "begin": "(?<![\\w$.])(?:(?:Type|t)\\.Script|Script|s)\\s*\\((?:[^`'\"]*?,\\s*)?(')",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.string.begin.ts" }
+      },
+      "end": "'",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.ts" }
+      },
+      "name": "meta.embedded.block.typescript",
+      "contentName": "meta.embedded.block.typescript",
+      "patterns": [
+        { "include": "#ts-tokens" }
+      ]
+    },
+    "ts-tokens": {
+      "patterns": [
+        { "include": "#ts-comment" },
+        { "include": "#ts-keywords" },
+        { "include": "#ts-types" },
+        { "include": "#ts-strings" },
+        { "include": "#ts-punctuation" }
+      ]
+    },
+    "ts-comment": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.ts",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.ts",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "ts-keywords": {
+      "patterns": [
+        {
+          "name": "support.type.primitive.ts",
+          "match": "\\b(string|number|boolean|symbol|bigint|object|any|unknown|void|never|null|undefined)\\b"
+        },
+        {
+          "name": "keyword.control.ts",
+          "match": "\\b(type|interface|extends|keyof|in|as|infer|readonly|typeof|import|export|from|return|const|let|var|if|else|for|while|class|implements|new|this|true|false|namespace|declare|abstract|enum|satisfies)\\b"
+        }
+      ]
+    },
+    "ts-types": {
+      "name": "entity.name.type.ts",
+      "match": "\\b([A-Z][a-zA-Z0-9_]*)\\b"
+    },
+    "ts-strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.ts",
+          "begin": "\"",
+          "end": "\""
+        },
+        {
+          "name": "string.quoted.single.ts",
+          "begin": "'",
+          "end": "'"
+        }
+      ]
+    },
+    "ts-punctuation": {
+      "patterns": [
+        { "name": "punctuation.definition.block.ts", "match": "[{}]" },
+        { "name": "punctuation.definition.bracket.ts", "match": "[\\[\\]]" },
+        { "name": "punctuation.definition.angle.ts", "match": "[<>]" },
+        { "name": "keyword.operator.ts", "match": "[|&?:=!+\\-*/%]" },
+        { "name": "punctuation.terminator.ts", "match": ";" }
+      ]
+    }
+  }
+}
