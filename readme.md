@@ -18,10 +18,6 @@ Visual Studio Code extension that enables TypeScript syntax highlighting inside 
 
 Licence MIT
 
-## Marketplace
-
-Reference [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=sinclairzx81.typebox-script).
-
 
 
 

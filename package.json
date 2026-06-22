@@ -2,7 +2,7 @@
   "name": "typebox-script",
   "displayName": "TypeBox Script",
   "description": "Syntax Highlighting for TypeBox Script Types",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "publisher": "sinclairzx81",
   "icon": "icon.png",
   "repository": {
