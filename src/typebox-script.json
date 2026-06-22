@@ -90,11 +90,15 @@
     "ts-numbers": {
       "patterns": [
         {
-          "name": "constant.numeric.ts",
-          "match": "\\b[0-9]+n\\b"
+          "comment": "bigint literal - ensure 'n' uses distinct highlight",
+          "match": "\\b([0-9]+)(n)\\b",
+          "captures": {
+            "1": { "name": "constant.numeric.ts" },
+            "2": { "name": "storage.type.numeric.bigint.ts" }
+          }
         },
         {
-          "name": "constant.numeric.ts",
+          "name": "constant.numeric.hex.ts",
           "match": "\\b0[xX][0-9a-fA-F]+\\b"
         },
         {
