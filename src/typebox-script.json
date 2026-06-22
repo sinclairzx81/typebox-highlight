@@ -1,13 +1,13 @@
 {
-  "scopeName": "typebox.highlight",
+  "scopeName": "typebox.script",
   "injectionSelector": "L:source.ts -comment -string, L:source.tsx -comment -string, L:source.js -comment -string, L:source.jsx -comment -string",
   "patterns": [
-    { "include": "#typebox-highlight-backtick" },
-    { "include": "#typebox-highlight-double" },
-    { "include": "#typebox-highlight-single" }
+    { "include": "#typebox-script-backtick" },
+    { "include": "#typebox-script-double" },
+    { "include": "#typebox-script-single" }
   ],
   "repository": {
-    "typebox-highlight-backtick": {
+    "typebox-script-backtick": {
       "begin": "(?<![\\w$.])(?:(?:Type|t)\\.Script|Script|s)\\s*\\((?:[^`'\"]*?,\\s*)?(`)",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.string.template.begin.ts" }
@@ -22,7 +22,7 @@
         { "include": "#ts-tokens" }
       ]
     },
-    "typebox-highlight-double": {
+    "typebox-script-double": {
       "begin": "(?<![\\w$.])(?:(?:Type|t)\\.Script|Script|s)\\s*\\((?:[^`'\"]*?,\\s*)?(\")",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.string.begin.ts" }
@@ -37,7 +37,7 @@
         { "include": "#ts-tokens" }
       ]
     },
-    "typebox-highlight-single": {
+    "typebox-script-single": {
       "begin": "(?<![\\w$.])(?:(?:Type|t)\\.Script|Script|s)\\s*\\((?:[^`'\"]*?,\\s*)?(')",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.string.begin.ts" }

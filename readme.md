@@ -1,15 +1,28 @@
-# TypeBox Highlight
+<div align='center'>
 
-Syntax highlighting for embedded TypeScript types
+<h1>TypeBox Script</h1>
+
+<p>Syntax Highlighting for TypeBox Script Types</p>
+
+<img src="https://github.com/sinclairzx81/typebox-script/raw/main/typebox-script.png" />
+
+<br />
+<br />
+
+[![TypeBox Script](https://badgen.net/vs-marketplace/v/sinclairzx81.typebox-script?label=TypeBox+Script+on+Visual+Studio+Marketplace)](https://marketplace.visualstudio.com/items?itemName=sinclairzx81.typebox-script)
+</div>
 
 ## Overview
 
-This is a VS Code extension project that enables syntax highlighting for TypeScript types embedded in Template Literal strings.
+Visual Studio Code extension that enables TypeScript syntax highlighting inside `Type.Script(...)`, `t.Script(...)`, `Script(...)` and `s(...)` calls.
 
 Licence MIT
 
-## Reference
+## Marketplace
 
-The highlights will use the current VS Code color theme.
+Reference [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=sinclairzx81.typebox-script).
 
-<img src="reference.png" />
+
+
+
+

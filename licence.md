@@ -1,4 +1,4 @@
-TypeBox-Highlight
+TypeBox-Script
 
 The MIT License (MIT)
 

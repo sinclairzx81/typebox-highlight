@@ -1,9 +1,14 @@
 {
-  "name": "typebox-highlight",
-  "displayName": "TypeBox Highlight",
-  "description": "Syntax highlighting for embedded TypeScript types",
-  "version": "0.0.1",
-  "publisher": "local",
+  "name": "typebox-script",
+  "displayName": "TypeBox Script",
+  "description": "Syntax Highlighting for TypeBox Script Types",
+  "version": "0.8.0",
+  "publisher": "sinclairzx81",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sinclairzx81/typebox-script"
+  },
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -13,8 +18,8 @@
   "contributes": {
     "grammars": [
       {
-        "scopeName": "typebox.highlight",
-        "path": "./src/typebox-highlight.json",
+        "scopeName": "typebox.script",
+        "path": "./src/typebox-script.json",
         "injectTo": [
           "source.ts",
           "source.tsx",
