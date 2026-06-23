@@ -14,7 +14,15 @@
 
 ## Overview
 
-Enables TypeScript syntax highlighting inside `Type.Script(...)` calls, as well as common aliases such as `t.Script(...)`, `Script(...)`, `type(...)`, `t(...)` and `s(...)`.
+Enables syntax highlighting for string embedded TypeScript. Will match for the following TypeBox and TypeDriver signatures.
+
+- Type.Script(`...`)
+- t.Script(`...`)
+- Script(`...`)
+- type(`...`)
+- compile(`...`)
+- t(`...`)
+- s(`...`)
 
 Licence MIT
 
